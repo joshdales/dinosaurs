@@ -14,3 +14,11 @@ dinosaur=# SELECT * FROM dinos WHERE period = 'Jurassic';
    5 | Yuanmousaurus       | Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Eusauropoda, Yuanmousaurus                                                                                                                              | Jiangyiensis     |     17 | Jurassic | Herbivorous | 2017-03-24 18:56:22.386808 | 2017-03-24 18:56:59.926924 | Saurischia
    6 | Yinlong             | Dinosauria, Ornithischia, Genasauria, Cerapoda, Marginocephalia, Ceratopsia, Yinlong                                                                                                                        | Downsi           |    1.2 | Jurassic | Herbivorous | 2017-03-24 18:56:22.38836  | 2017-03-24 18:56:59.928721 | Ornithischia
    7 | Yingshanosaurus     | Dinosauria, Ornithischia, Genasauria, Thyreophora, Stegosauria, Yingshanosaurus                                                                                                                             | Jichu:
+
+3.Jurassic Park was a huge success for us. Now we want to open up a sequel park: Cretaceous Park. This time though, we're a little more organized, and we want to know how much space all these dinosaurs are going to take up. Find the total sum length of all the dinosaurs from the Cretaceous period.
+
+dinosaur=# SELECT SUM(length) FROM dinos WHERE period = 'Cretaceous';
+   sum
+---------
+ 1366.45
+(1 row)
