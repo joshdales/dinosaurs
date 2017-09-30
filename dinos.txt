@@ -22,3 +22,12 @@ dinosaur=# SELECT SUM(length) FROM dinos WHERE period = 'Cretaceous';
 ---------
  1366.45
 (1 row)
+
+4.Saurischians are the "lizard hipped" order of dinosaurs, and one of the two main branches. All carnivorous dinosaurs are Saurischians, but not all Saurischians are carnivorous. Find all the dinosaurs from the t_order Saurischia that are Herbivorous.
+
+dinosaur=# SELECT * FROM dinos WHERE t_order = 'Saurischia' and diet = 'Herbivorous';
+ id  |        name         |                                                                                                 taxonomy                                                                                                  |     species      | length |   period   |    diet     |         created_at         |         updated_at         |  t_order
+-----+---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+--------+------------+-------------+----------------------------+----------------------------+------------
+   5 | Yuanmousaurus       | Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Eusauropoda, Yuanmousaurus                                                                                                                            | Jiangyiensis     |     17 | Jurassic   | Herbivorous | 2017-03-24 18:56:22.386808 | 2017-03-24 18:56:59.926924 | Saurischia
+   8 | Yimenosaurus        | Dinosauria, Saurischia, Sauropodomorpha, Prosauropoda, Yimenosaurus                                                                                                                                       | Youngi           |      9 | Jurassic   | Herbivorous | 2017-03-24 18:56:22.391572 | 2017-03-24 18:56:59.931889 | Saurischia
+  12 | Vulcanodon          | Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Vulcanodontidae, Vulcanodon                                                                                                                           | Karibae:
