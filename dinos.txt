@@ -31,3 +31,13 @@ dinosaur=# SELECT * FROM dinos WHERE t_order = 'Saurischia' and diet = 'Herbivor
    5 | Yuanmousaurus       | Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Eusauropoda, Yuanmousaurus                                                                                                                            | Jiangyiensis     |     17 | Jurassic   | Herbivorous | 2017-03-24 18:56:22.386808 | 2017-03-24 18:56:59.926924 | Saurischia
    8 | Yimenosaurus        | Dinosauria, Saurischia, Sauropodomorpha, Prosauropoda, Yimenosaurus                                                                                                                                       | Youngi           |      9 | Jurassic   | Herbivorous | 2017-03-24 18:56:22.391572 | 2017-03-24 18:56:59.931889 | Saurischia
   12 | Vulcanodon          | Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Vulcanodontidae, Vulcanodon                                                                                                                           | Karibae:
+
+6. Dinosaur names are hard to remember. Find the shortest dinosaur, and rename it Shortie.
+dinosaur=# SELECT MIN(name) FROM dinos;
+   min
+----------
+ Aardonyx
+(1 row)
+
+dinosaur=# UPDATE dinos SET name = 'Shortie' WHERE name = 'Aardonyx';
+UPDATE 1
