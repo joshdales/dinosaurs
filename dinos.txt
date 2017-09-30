@@ -1,0 +1,7 @@
+1. Let's start by figuring out how many dinosaurs we have. Count the number of dinosaurs.
+
+dinosaur=# SELECT COUNT(*) FROM dinos;
+ count
+-------
+   331
+(1 row)
