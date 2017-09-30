@@ -5,3 +5,12 @@ dinosaur=# SELECT COUNT(*) FROM dinos;
 -------
    331
 (1 row)
+
+2. We want to open up our own version of Jurassic Park, but this time only with dinosaurs who are actually from the Jurassic period. Find all the dinosaurs from the Jurassic period.
+
+dinosaur=# SELECT * FROM dinos WHERE period = 'Jurassic';
+ id  |        name         |                                                                                                  taxonomy                                                                                                   |     species      | length |  period  |    diet     |         created_at         |         updated_at         |   t_order
+-----+---------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+--------+----------+-------------+----------------------------+----------------------------+--------------
+   5 | Yuanmousaurus       | Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Eusauropoda, Yuanmousaurus                                                                                                                              | Jiangyiensis     |     17 | Jurassic | Herbivorous | 2017-03-24 18:56:22.386808 | 2017-03-24 18:56:59.926924 | Saurischia
+   6 | Yinlong             | Dinosauria, Ornithischia, Genasauria, Cerapoda, Marginocephalia, Ceratopsia, Yinlong                                                                                                                        | Downsi           |    1.2 | Jurassic | Herbivorous | 2017-03-24 18:56:22.38836  | 2017-03-24 18:56:59.928721 | Ornithischia
+   7 | Yingshanosaurus     | Dinosauria, Ornithischia, Genasauria, Thyreophora, Stegosauria, Yingshanosaurus                                                                                                                             | Jichu:
