@@ -33,13 +33,18 @@ dinosaur=# SELECT * FROM dinos WHERE t_order = 'Saurischia' and diet = 'Herbivor
   12 | Vulcanodon          | Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Vulcanodontidae, Vulcanodon                                                                                                                           | Karibae:
 
 6.  Dinosaur names are hard to remember. Find the shortest dinosaur, and rename it Shortie.
-dinosaur=# SELECT MIN(name) FROM dinos;
-   min
-----------
- Aardonyx
+dinosaur=# SELECT MIN(length) FROM dinos;
+ min
+------
+ 0.08
 (1 row)
 
-dinosaur=# UPDATE dinos SET name = 'Shortie' WHERE name = 'Aardonyx';
+dinosaur=# SELECT * FROM dinos WHERE length=0.08;
+ id  |    name     |                                                                                                                            taxonomy                                                                                                                            |  species  | length |   period   |    diet     |        created_at         |         updated_at         |  t_order
+-----+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+------------+-------------+---------------------------+----------------------------+------------
+ 160 | Liaoxiornis | Dinosauria, Saurischia, Theropoda, Neotherapoda, Tetanurae, Avetherapoda, Coelurosauria, Tyrannoraptora, Maniraptoriformes, Maniraptora, Paraves, Eumaniraptoria, Avialae, Ornithurae, Avibrevicauda, Pygostylia, Ornithathoraces, Enantiornithes, Liaoxiornis | Delicatus |   0.08 | Cretaceous | Carnivorous | 2017-03-24 18:56:22.64813 | 2017-03-24 18:57:00.236074 | Saurischia
+
+dinosaur=# UPDATE dinos SET name = 'Shortie' WHERE name = 'Liaoxiornis';
 UPDATE 1
 
 7.  It's the first day of Dino School, and we're doing roll call. Find the alphabetically first dinosaur, so we can make sure they're present for class.
