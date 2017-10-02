@@ -44,8 +44,8 @@ UPDATE 1
 
 7.  It's the first day of Dino School, and we're doing roll call. Find the alphabetically first dinosaur, so we can make sure they're present for class.
 
-dinosaur=# SELECT * FROM dinos ORDER BY name;
- id  |          name           |                                                                                                                            taxonomy                                                                                                                            |      species      | length |   period   |          diet          |         created_at         |         updated_at         |   t_order
------+-------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------+------------+------------------------+----------------------------+----------------------------+--------------
- 330 | Abelisaurus             | Dinosauria, Saurischia, Theropoda, Neotherapoda, Ceratosauria, Neoceratosauria, Abelisauridae, Abelisaurinae, Abelisaurus                                                                                                                                      | Comahuensis       |      9 | Cretaceous | Carnivorous            | 2017-03-24 18:56:22.906978 | 2017-03-24 18:57:00.414094 | Saurischia
- 329 | Achelousaurus           | Dinosauria, Ornithischia, Genasauria, Cerapoda, Marginocephalia, Ceratopsia, Neoceratopsia, Coronosauria, Ceratopsomorpha, Ceratopsidae, Centrosaurinae, Achelousaurus                                                                                         | Horneri           |      6 | Cretaceous | Herbivorous            | 2017-03-24 18:56:22.9055   | 2017-03-24 18::
+dinosaur=# SELECT * FROM dinos ORDER BY name LIMIT 1;
+ id  |    name     |                                                         taxonomy                                                          |   species   | length |   period   |    diet     |         created_at         |         updated_at         |  t_order
+-----+-------------+---------------------------------------------------------------------------------------------------------------------------+-------------+--------+------------+-------------+----------------------------+----------------------------+------------
+ 330 | Abelisaurus | Dinosauria, Saurischia, Theropoda, Neotherapoda, Ceratosauria, Neoceratosauria, Abelisauridae, Abelisaurinae, Abelisaurus | Comahuensis |      9 | Cretaceous | Carnivorous | 2017-03-24 18:56:22.906978 | 2017-03-24 18:57:00.414094 | Saurischia
+(1 row)
